@@ -12,13 +12,13 @@ from huggingface_hub import snapshot_download
 # Configuration
 model_repo = "rain1011/pyramid-flow-sd3"  # Replace with the actual model repository on Hugging Face
 model_dtype = 'bf16'
-variant = 'diffusion_transformer_768p'  # For high resolution version
-width = 1280
-height = 768
+# variant = 'diffusion_transformer_768p'  # For high resolution version
+# width = 1280
+# height = 768
 
-# variant = 'diffusion_transformer_384p'  # For low resolution version
-# width = 640
-# height = 384
+variant = 'diffusion_transformer_384p'  # For low resolution version
+width = 640
+height = 384
 
 # Get the current working directory and create a folder to store the model
 current_directory = os.getcwd()
