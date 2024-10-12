@@ -96,7 +96,7 @@ def generate_text_to_video(prompt, temp, guidance_scale, video_guidance_scale):
             video_guidance_scale=video_guidance_scale,
             output_type="pil",
             save_memory=True,  # If you have enough GPU memory, set it to `False` to improve vae decoding speed
-            cpu_offloading=False, # If you do not have enough GPU memory, set it to `True` to reduce memory usage (will increase inference time)
+            cpu_offloading=True, # If you do not have enough GPU memory, set it to `True` to reduce memory usage (will increase inference time)
         )
 
     video_path = f"{str(uuid.uuid4())}_text_to_video_sample.mp4"
