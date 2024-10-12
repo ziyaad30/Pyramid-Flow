@@ -49,10 +49,10 @@ model = PyramidDiTForVideoGeneration(
     model_dtype,
     model_variant=variant,
 )
-model.vae.to("cuda")
-model.dit.to("cuda")
-model.text_encoder.to("cuda")
-model.vae.enable_tiling()
+# model.vae.to("cuda")
+# model.dit.to("cuda")
+# model.text_encoder.to("cuda")
+# model.vae.enable_tiling()
 
 # Set torch_dtype based on model_dtype
 if model_dtype == "bf16":
